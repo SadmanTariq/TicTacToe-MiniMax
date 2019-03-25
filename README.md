@@ -1,3 +1,5 @@
+This branch will use Alpha Beta Pruning in the future.
+
 # Tic Tac Toe AI
 This contains a tic tac toe game and an AI with the minimax algorithm.
 Made in Python 3.7.2
