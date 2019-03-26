@@ -3,11 +3,15 @@ import Game
 # import Algorithm
 
 
-class AI(Player):
+class MiniMax(Player):
     def __init__(self, name, symbol):
         self.Name = name
         self.Type = "Computer"
         self.Symbol = symbol
+        if symbol == "X":
+            self.OpponentSymbol = 'O'
+        else:
+            self.OpponentSymbol = 'X'
 
     def GetMove(self, board):
         """Return the best possible move."""
@@ -57,7 +61,7 @@ class AI(Player):
             for i in range(len(board)):
                 if board[i] == ' ':
                     new_board = board.copy()
-                    new_board[i] = 'O'
+                    new_board[i] = self.OpponentSymbol
 
                     best = min(best, self.MiniMax(new_board, depth + 1,
                                not isMax))
