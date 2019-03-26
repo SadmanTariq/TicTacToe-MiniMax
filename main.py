@@ -5,8 +5,8 @@ import AI
 
 CurrentBoard = Board()
 
-player_1 = Human.Human("Computer 1", "X")
-player_2 = AI.MiniMax("Computer 2", "O")
+player_1 = Human.Human("Human", "X")
+player_2 = AI.MiniMax("Computer", "O")
 
 
 while not Game.IsOver(CurrentBoard.BoardList):

@@ -1,6 +1,5 @@
 from Player import Player
 import Game
-# import Algorithm
 
 
 class MiniMax(Player):
@@ -27,6 +26,7 @@ class MiniMax(Player):
             return -10
 
     def MovesLeft(self, board):
+        """Return False if there are no moves left. Otherwise, return True."""
         if " " in board:
             return True
         else:
