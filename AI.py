@@ -77,7 +77,7 @@ class MiniMax(Player):
                 new_board = board.copy()
                 new_board[i] = self.Symbol
 
-                move_value = self.MiniMax(board, 0, False)
+                move_value = self.MiniMax(new_board, 0, False)
 
                 if move_value > best_value:
                     best_value = move_value
